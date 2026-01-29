@@ -2,7 +2,12 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { CoupleIllustration, FloralBouquet, FloralStem } from "@/assets/images";
+import {
+  CoupleIllustration,
+  FloralBouquet,
+  FloralStem,
+  FloralSplash,
+} from "@/assets/images";
 
 interface CardFrontProps {
   groomName: string;
@@ -15,6 +20,16 @@ export default function CardFront({ groomName, brideName }: CardFrontProps) {
     <div className="relative w-full aspect-3/4 overflow-hidden rounded-sm shadow-2xl">
       {/* Background with cream color */}
       <div className="absolute inset-0 bg-[#FBF7F0]" />
+
+      {/* Background Splash */}
+      <div className="absolute inset-0 opacity-10 pointer-events-none">
+        <Image
+          src={FloralSplash}
+          alt="Watercolor splash"
+          fill
+          className="object-cover"
+        />
+      </div>
 
       {/* Gold vertical stripes - left */}
       <div className="absolute left-0 top-0 bottom-0 w-4 bg-linear-to-r from-[#C5A572] to-[#D4BC8A]" />
