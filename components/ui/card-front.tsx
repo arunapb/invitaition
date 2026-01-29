@@ -28,6 +28,8 @@ export default function CardFront({ groomName, brideName }: CardFrontProps) {
           alt="Watercolor splash"
           fill
           className="object-cover"
+          sizes="100vw"
+          priority
         />
       </div>
 
@@ -47,8 +49,9 @@ export default function CardFront({ groomName, brideName }: CardFrontProps) {
           src={FloralBouquet}
           alt="Floral decoration"
           fill
-          className="object-contain"
           style={{ transform: "rotate(-30deg)" }}
+          sizes="(max-width: 768px) 40vw, 20vw"
+          priority
         />
       </div>
 
@@ -59,6 +62,7 @@ export default function CardFront({ groomName, brideName }: CardFrontProps) {
           alt="Floral stems"
           fill
           className="object-contain"
+          sizes="(max-width: 768px) 30vw, 15vw"
         />
       </div>
 
@@ -70,8 +74,8 @@ export default function CardFront({ groomName, brideName }: CardFrontProps) {
           src={FloralBouquet}
           alt="Floral decoration"
           fill
-          className="object-contain"
           style={{ transform: "scaleX(-1) rotate(0deg)" }}
+          sizes="(max-width: 768px) 50vw, 25vw"
         />
       </div>
 
@@ -95,6 +99,8 @@ export default function CardFront({ groomName, brideName }: CardFrontProps) {
             alt="Couple illustration"
             fill
             className="object-contain"
+            priority
+            sizes="(max-width: 768px) 33vw, 15vw"
           />
         </motion.div>
 
