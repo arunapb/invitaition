@@ -155,32 +155,6 @@ export default function CardFront({ groomName, brideName }: CardFrontProps) {
           <div className="w-1.5 h-1.5 rounded-full bg-[#C5A572]/60" />
           <div className="w-8 h-px bg-linear-to-l from-transparent to-[#C5A572]/60" />
         </div>
-
-        {/* Tap to open */}
-        <motion.div
-          className="flex flex-col items-center"
-          animate={{ y: [0, 4, 0] }}
-          transition={{ duration: 1.5, repeat: Infinity }}
-        >
-          <p className="text-xs tracking-[0.15em] text-[#9A8B7A] uppercase mb-2">
-            Tap to Open
-          </p>
-          <svg
-            width="20"
-            height="20"
-            viewBox="0 0 24 24"
-            fill="none"
-            className="text-[#C5A572]/70"
-          >
-            <path
-              d="M12 5L12 19M12 19L6 13M12 19L18 13"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-        </motion.div>
       </div>
 
       {/* Subtle shimmer effect */}
