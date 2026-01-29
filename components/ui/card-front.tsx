@@ -44,7 +44,7 @@ export default function CardFront({ groomName, brideName }: CardFrontProps) {
       {/* Watercolor floral decoration - top right */}
 
       {/* Watercolor floral decoration - top left */}
-      <div className="absolute -top-10 -left-10 w-56 h-56 opacity-90">
+      <div className="absolute -top-6 -left-6 w-32 h-32 md:-top-10 md:-left-10 md:w-56 md:h-56 opacity-90">
         <Image
           src={FloralBouquet}
           alt="Floral decoration"
@@ -69,7 +69,7 @@ export default function CardFront({ groomName, brideName }: CardFrontProps) {
       {/* Watercolor floral decoration - bottom left */}
 
       {/* Watercolor floral decoration - bottom right */}
-      <div className="absolute -bottom-16 -right-16 w-72 h-72 opacity-85">
+      <div className="absolute -bottom-8 -right-8 w-40 h-40 md:-bottom-16 md:-right-16 md:w-72 md:h-72 opacity-85">
         <Image
           src={FloralBouquet}
           alt="Floral decoration"

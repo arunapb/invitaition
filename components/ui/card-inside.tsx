@@ -82,7 +82,7 @@ export default function CardInside({ details, isOpen }: CardInsideProps) {
       {/* Watercolor floral - top right */}
 
       {/* Watercolor floral - top left */}
-      <div className="absolute -top-10 -left-10 w-56 h-56 opacity-90">
+      <div className="absolute -top-6 -left-6 w-32 h-32 md:-top-10 md:-left-10 md:w-56 md:h-56 opacity-90">
         <Image
           src={FloralBouquet}
           alt="Floral decoration"
@@ -106,7 +106,7 @@ export default function CardInside({ details, isOpen }: CardInsideProps) {
       {/* Watercolor floral - bottom left */}
 
       {/* Watercolor floral - bottom right */}
-      <div className="absolute -bottom-16 -right-16 w-72 h-72 opacity-85">
+      <div className="absolute -bottom-8 -right-8 w-40 h-40 md:-bottom-16 md:-right-16 md:w-72 md:h-72 opacity-85">
         <Image
           src={FloralBouquet}
           alt="Floral decoration"
@@ -130,7 +130,10 @@ export default function CardInside({ details, isOpen }: CardInsideProps) {
         animate={isOpen ? "visible" : "hidden"}
       >
         {/* Couple illustration */}
-        <motion.div variants={itemVariants} className="relative w-20 h-20 mb-2">
+        <motion.div
+          variants={itemVariants}
+          className="relative w-16 h-16 md:w-20 md:h-20 mb-2"
+        >
           <Image
             src={CoupleIllustration}
             alt="Couple illustration"
@@ -263,7 +266,7 @@ export default function CardInside({ details, isOpen }: CardInsideProps) {
         {/* Bottom Left Content: Contact & Location */}
         <motion.div
           variants={itemVariants}
-          className="absolute bottom-6 left-10 flex flex-col items-start gap-3"
+          className="absolute bottom-4 left-6 md:bottom-6 md:left-10 flex flex-col items-start gap-2 md:gap-3"
         >
           {/* Contact Details */}
           <p className="text-[10px] tracking-wider text-[#9A8B7A] uppercase font-medium">
