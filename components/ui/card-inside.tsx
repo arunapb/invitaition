@@ -52,7 +52,7 @@ export default function CardInside({ details, isOpen }: CardInsideProps) {
 
   const handleLocationClick = (e: React.MouseEvent) => {
     e.stopPropagation();
-    window.open(details.mapUrl, "_blank");
+    window.open(details.mapUrl, "_self");
   };
 
   return (
@@ -269,9 +269,12 @@ export default function CardInside({ details, isOpen }: CardInsideProps) {
           className="absolute bottom-4 left-10 md:bottom-6 md:left-12 flex flex-col items-start gap-2 md:gap-3"
         >
           {/* Contact Details */}
-          <p className="text-[10px] tracking-wider text-[#9A8B7A] uppercase font-medium">
+          <a
+            href="tel:+94741462698"
+            className="text-[10px] tracking-wider text-[#9A8B7A] uppercase font-medium hover:text-[#8B1A4A] transition-colors"
+          >
             Darshana +94 74 146 2698
-          </p>
+          </a>
 
           {/* Location Button */}
           <div
