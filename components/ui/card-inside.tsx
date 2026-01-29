@@ -160,7 +160,7 @@ export default function CardInside({ details, isOpen }: CardInsideProps) {
         {/* Couple names */}
         <motion.h1 variants={itemVariants} className="text-center mb-1">
           <span
-            className="text-3xl md:text-4xl"
+            className="text-2xl md:text-4xl"
             style={{
               fontFamily: "'Great Vibes', cursive",
               background:
@@ -179,7 +179,7 @@ export default function CardInside({ details, isOpen }: CardInsideProps) {
             &
           </span>
           <span
-            className="text-3xl md:text-4xl"
+            className="text-2xl md:text-4xl"
             style={{
               fontFamily: "'Great Vibes', cursive",
               background:
@@ -248,7 +248,7 @@ export default function CardInside({ details, isOpen }: CardInsideProps) {
         {/* Venue */}
         <motion.div variants={itemVariants} className="text-center mb-3">
           <p
-            className="text-sm font-semibold tracking-wide uppercase"
+            className="text-xs md:text-sm font-semibold tracking-wide uppercase"
             style={{
               fontFamily: "'Playfair Display', serif",
               color: "#8B1A4A",
