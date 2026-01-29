@@ -110,33 +110,36 @@ export default function InvitationCard({ details }: InvitationCardProps) {
           />
         </motion.div>
 
-        {/* Click indicator/hint overlay - Centered on closed card */}
+        {/* Tap indicator text below card */}
         <motion.div
-          className="absolute z-20 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none flex flex-col items-center"
+          className="text-center mt-12"
           initial={{ opacity: 0 }}
           animate={{ opacity: isOpen ? 0 : 1 }}
-          transition={{ duration: 0.5 }}
+          transition={{ delay: 0.5, duration: 0.5 }}
         >
-          <div className="bg-white/80 backdrop-blur-sm px-6 py-3 rounded-full shadow-lg border border-[#C5A572]/30 flex flex-col items-center gap-2">
-            <p className="text-xs tracking-[0.2em] text-[#8B1A4A] font-semibold uppercase">
-              Tap to Open
-            </p>
+          <p className="text-xs tracking-[0.25em] text-[#8B1A4A] font-medium uppercase mb-2">
+            Tap to Open
+          </p>
+          <motion.div
+            animate={{ y: [0, 5, 0] }}
+            transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+          >
             <svg
-              width="16"
-              height="16"
+              width="20"
+              height="20"
               viewBox="0 0 24 24"
               fill="none"
-              className="text-[#C5A572] animate-bounce"
+              className="text-[#C5A572] mx-auto"
             >
               <path
                 d="M12 5L12 19M12 19L6 13M12 19L18 13"
                 stroke="currentColor"
-                strokeWidth="2"
+                strokeWidth="1.5"
                 strokeLinecap="round"
                 strokeLinejoin="round"
               />
             </svg>
-          </div>
+          </motion.div>
         </motion.div>
       </div>
     </div>
