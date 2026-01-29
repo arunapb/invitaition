@@ -40,24 +40,15 @@ export default function CardFront({ groomName, brideName }: CardFrontProps) {
       <div className="absolute right-5 top-0 bottom-0 w-1 bg-[#C5A572]/50" />
 
       {/* Watercolor floral decoration - top right */}
-      <div className="absolute -top-2 -right-4 w-36 h-36 opacity-90">
-        <Image
-          src={FloralBouquet}
-          alt="Floral decoration"
-          fill
-          className="object-contain"
-          style={{ transform: "rotate(45deg) scaleX(-1)" }}
-        />
-      </div>
 
       {/* Watercolor floral decoration - top left */}
-      <div className="absolute -top-2 -left-4 w-32 h-32 opacity-85">
+      <div className="absolute -top-10 -left-10 w-56 h-56 opacity-90">
         <Image
           src={FloralBouquet}
           alt="Floral decoration"
           fill
           className="object-contain"
-          style={{ transform: "rotate(-45deg)" }}
+          style={{ transform: "rotate(-30deg)" }}
         />
       </div>
 
@@ -72,24 +63,15 @@ export default function CardFront({ groomName, brideName }: CardFrontProps) {
       </div>
 
       {/* Watercolor floral decoration - bottom left */}
-      <div className="absolute -bottom-6 -left-6 w-44 h-44 opacity-85">
-        <Image
-          src={FloralBouquet}
-          alt="Floral decoration"
-          fill
-          className="object-contain"
-          style={{ transform: "rotate(15deg)" }}
-        />
-      </div>
 
       {/* Watercolor floral decoration - bottom right */}
-      <div className="absolute -bottom-4 -right-4 w-40 h-40 opacity-80">
+      <div className="absolute -bottom-10 -right-10 w-64 h-64 opacity-85">
         <Image
           src={FloralBouquet}
           alt="Floral decoration"
           fill
           className="object-contain"
-          style={{ transform: "scaleX(-1) rotate(10deg)" }}
+          style={{ transform: "scaleX(-1) rotate(0deg)" }}
         />
       </div>
 
