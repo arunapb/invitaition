@@ -90,7 +90,7 @@ export default function CardFront({ groomName, brideName }: CardFrontProps) {
       {/* Main content */}
       <div className="absolute inset-0 pointer-events-none">
         {/* Top Section: Illustration & Title */}
-        <div className="absolute top-[15%] left-0 right-0 flex flex-col items-center">
+        <div className="absolute top-[18%] left-0 right-0 flex flex-col items-center">
           {/* Couple illustration */}
           <motion.div
             className="mb-4 relative w-20 h-20 md:w-24 md:h-24"
@@ -114,7 +114,7 @@ export default function CardFront({ groomName, brideName }: CardFrontProps) {
         </div>
 
         {/* Bottom Section: Names & Divider */}
-        <div className="absolute bottom-[10%] left-0 right-0 flex flex-col items-center">
+        <div className="absolute bottom-[8%] left-0 right-0 flex flex-col items-center">
           {/* Couple names */}
           <motion.h1
             className="text-center leading-tight mb-6"
