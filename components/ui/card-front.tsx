@@ -88,9 +88,9 @@ export default function CardFront({ groomName, brideName }: CardFrontProps) {
 
       {/* Main content */}
       {/* Main content */}
-      <div className="absolute inset-0 flex flex-col items-center justify-between px-6 py-8 md:px-12 md:py-12">
+      <div className="absolute inset-0 pointer-events-none">
         {/* Top Section: Illustration & Title */}
-        <div className="flex flex-col items-center mt-4 md:mt-8">
+        <div className="absolute top-[15%] left-0 right-0 flex flex-col items-center">
           {/* Couple illustration */}
           <motion.div
             className="mb-4 relative w-20 h-20 md:w-24 md:h-24"
@@ -113,11 +113,8 @@ export default function CardFront({ groomName, brideName }: CardFrontProps) {
           </p>
         </div>
 
-        {/* Center Spacer for Seal */}
-        <div className="h-32 w-full" aria-hidden="true" />
-
         {/* Bottom Section: Names & Divider */}
-        <div className="flex flex-col items-center mb-8 md:mb-12">
+        <div className="absolute bottom-[10%] left-0 right-0 flex flex-col items-center">
           {/* Couple names */}
           <motion.h1
             className="text-center leading-tight mb-6"
