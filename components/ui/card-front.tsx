@@ -69,12 +69,12 @@ export default function CardFront({ groomName, brideName }: CardFrontProps) {
       {/* Watercolor floral decoration - bottom left */}
 
       {/* Watercolor floral decoration - bottom right */}
-      <div className="absolute -bottom-10 -right-10 w-64 h-64 opacity-85">
+      <div className="absolute -bottom-16 -right-16 w-72 h-72 opacity-85">
         <Image
           src={FloralBouquet}
           alt="Floral decoration"
           fill
-          style={{ transform: "scaleX(-1) rotate(0deg)" }}
+          style={{ transform: "rotate(180deg)" }}
           sizes="(max-width: 768px) 50vw, 25vw"
         />
       </div>
