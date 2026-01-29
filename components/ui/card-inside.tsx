@@ -160,9 +160,9 @@ export default function CardInside({ details, isOpen }: CardInsideProps) {
         {/* Couple names */}
         <motion.h1 variants={itemVariants} className="text-center mb-1">
           <span
-            className="text-2xl md:text-4xl"
+            className="text-2xl md:text-4xl font-bold italic"
             style={{
-              fontFamily: "'Great Vibes', cursive",
+              fontFamily: "var(--font-heading)",
               background:
                 "linear-gradient(135deg, #C5A572 0%, #D4BC8A 50%, #B8956A 100%)",
               WebkitBackgroundClip: "text",
@@ -173,15 +173,15 @@ export default function CardInside({ details, isOpen }: CardInsideProps) {
             {details.groomName}
           </span>
           <span
-            className="text-xl mx-2"
-            style={{ fontFamily: "'Great Vibes', cursive", color: "#C5A572" }}
+            className="text-xl mx-2 italic"
+            style={{ fontFamily: "var(--font-heading)", color: "#C5A572" }}
           >
             &
           </span>
           <span
-            className="text-2xl md:text-4xl"
+            className="text-2xl md:text-4xl font-bold italic"
             style={{
-              fontFamily: "'Great Vibes', cursive",
+              fontFamily: "var(--font-heading)",
               background:
                 "linear-gradient(135deg, #C5A572 0%, #D4BC8A 50%, #B8956A 100%)",
               WebkitBackgroundClip: "text",
@@ -250,7 +250,7 @@ export default function CardInside({ details, isOpen }: CardInsideProps) {
           <p
             className="text-xs md:text-sm font-semibold tracking-wide uppercase"
             style={{
-              fontFamily: "'Playfair Display', serif",
+              fontFamily: "var(--font-heading)",
               color: "#8B1A4A",
             }}
           >
@@ -266,7 +266,7 @@ export default function CardInside({ details, isOpen }: CardInsideProps) {
         {/* Bottom Left Content: Contact & Location */}
         <motion.div
           variants={itemVariants}
-          className="absolute bottom-4 left-6 md:bottom-6 md:left-10 flex flex-col items-start gap-2 md:gap-3"
+          className="absolute bottom-4 left-10 md:bottom-6 md:left-12 flex flex-col items-start gap-2 md:gap-3"
         >
           {/* Contact Details */}
           <p className="text-[10px] tracking-wider text-[#9A8B7A] uppercase font-medium">

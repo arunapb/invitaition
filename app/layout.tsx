@@ -1,26 +1,18 @@
 import type { Metadata, Viewport } from "next";
-import {
-  Cormorant_Garamond,
-  Great_Vibes,
-  Playfair_Display,
-} from "next/font/google";
+import { Lato, Playfair_Display } from "next/font/google";
 import "./globals.css";
 
-const cormorant = Cormorant_Garamond({
-  variable: "--font-serif",
+const lato = Lato({
+  variable: "--font-body",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-});
-
-const greatVibes = Great_Vibes({
-  variable: "--font-script",
-  subsets: ["latin"],
-  weight: ["400"],
+  weight: ["300", "400", "700"],
 });
 
 const playfair = Playfair_Display({
-  variable: "--font-display",
+  variable: "--font-heading",
   subsets: ["latin"],
+  // Including italic since it might be nice for names
+  style: ["normal", "italic"],
   weight: ["400", "500", "600", "700"],
 });
 
@@ -51,9 +43,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${cormorant.variable} ${greatVibes.variable} ${playfair.variable} antialiased`}
-      >
+      <body className={`${lato.variable} ${playfair.variable} antialiased`}>
         {children}
       </body>
     </html>
