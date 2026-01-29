@@ -67,6 +67,7 @@ export default function CardInside({ details, isOpen }: CardInsideProps) {
           alt="Watercolor splash"
           fill
           className="object-cover"
+          sizes="100vw"
         />
       </div>
 
@@ -86,8 +87,8 @@ export default function CardInside({ details, isOpen }: CardInsideProps) {
           src={FloralBouquet}
           alt="Floral decoration"
           fill
-          className="object-contain"
           style={{ transform: "rotate(-30deg)" }}
+          sizes="(max-width: 768px) 40vw, 20vw"
         />
       </div>
 
@@ -98,6 +99,7 @@ export default function CardInside({ details, isOpen }: CardInsideProps) {
           alt="Floral stems"
           fill
           className="object-contain mix-blend-multiply"
+          sizes="(max-width: 768px) 25vw, 15vw"
         />
       </div>
 
@@ -109,8 +111,8 @@ export default function CardInside({ details, isOpen }: CardInsideProps) {
           src={FloralBouquet}
           alt="Floral decoration"
           fill
-          className="object-contain"
           style={{ transform: "scaleX(-1) rotate(0deg)" }}
+          sizes="(max-width: 768px) 50vw, 25vw"
         />
       </div>
 
@@ -134,6 +136,7 @@ export default function CardInside({ details, isOpen }: CardInsideProps) {
             alt="Couple illustration"
             fill
             className="object-contain"
+            sizes="(max-width: 768px) 30vw, 10vw"
           />
         </motion.div>
 
@@ -257,72 +260,33 @@ export default function CardInside({ details, isOpen }: CardInsideProps) {
         </motion.div>
 
         {/* Contact Details */}
-        <motion.p
-          variants={itemVariants}
-          className="text-[10px] tracking-wider text-[#9A8B7A] uppercase mb-4"
-        >
-          Darshana +94 74 146 2698
-        </motion.p>
-
-        {/* Location QR Code Section */}
+        {/* Bottom Left Content: Contact & Location */}
         <motion.div
           variants={itemVariants}
-          className="flex items-end justify-end w-full mt-auto"
-          onClick={handleLocationClick}
+          className="absolute bottom-6 left-10 flex flex-col items-start gap-3"
         >
-          <div className="flex items-center gap-2 cursor-pointer group">
-            {/* QR Code placeholder */}
-            <div className="w-14 h-14 bg-linear-to-br from-[#C5A572] to-[#D4BC8A] rounded p-0.5 shadow-md group-hover:shadow-lg transition-shadow">
-              <div className="w-full h-full bg-white rounded-sm flex items-center justify-center">
-                <svg viewBox="0 0 50 50" className="w-11 h-11">
-                  {/* QR Code pattern */}
-                  <rect x="5" y="5" width="12" height="12" fill="#C5A572" />
-                  <rect x="33" y="5" width="12" height="12" fill="#C5A572" />
-                  <rect x="5" y="33" width="12" height="12" fill="#C5A572" />
-                  <rect x="8" y="8" width="6" height="6" fill="white" />
-                  <rect x="36" y="8" width="6" height="6" fill="white" />
-                  <rect x="8" y="36" width="6" height="6" fill="white" />
-                  <rect x="10" y="10" width="2" height="2" fill="#C5A572" />
-                  <rect x="38" y="10" width="2" height="2" fill="#C5A572" />
-                  <rect x="10" y="38" width="2" height="2" fill="#C5A572" />
-                  {/* Center pattern */}
-                  <rect x="20" y="5" width="3" height="3" fill="#C5A572" />
-                  <rect x="25" y="8" width="3" height="3" fill="#C5A572" />
-                  <rect x="20" y="11" width="3" height="3" fill="#C5A572" />
-                  <rect x="5" y="20" width="3" height="3" fill="#C5A572" />
-                  <rect x="11" y="22" width="3" height="3" fill="#C5A572" />
-                  <rect
-                    x="20"
-                    y="20"
-                    width="10"
-                    height="10"
-                    fill="none"
-                    stroke="#C5A572"
-                    strokeWidth="2"
-                  />
-                  <rect x="23" y="23" width="4" height="4" fill="#C5A572" />
-                  <rect x="33" y="20" width="3" height="3" fill="#C5A572" />
-                  <rect x="42" y="22" width="3" height="3" fill="#C5A572" />
-                  <rect x="20" y="35" width="3" height="3" fill="#C5A572" />
-                  <rect x="25" y="40" width="3" height="3" fill="#C5A572" />
-                  <rect x="35" y="35" width="10" height="10" fill="#C5A572" />
-                  <rect x="38" y="38" width="4" height="4" fill="white" />
-                </svg>
-              </div>
-            </div>
-            {/* Location label */}
-            <div className="flex items-center gap-1 bg-[#8B1A4A]/90 text-white text-[9px] px-2 py-1 rounded shadow group-hover:bg-[#A52A5A] transition-colors">
-              <svg
-                width="10"
-                height="10"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                className="text-[#D4BC8A]"
-              >
-                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
-              </svg>
-              <span className="tracking-wider uppercase">Location</span>
-            </div>
+          {/* Contact Details */}
+          <p className="text-[10px] tracking-wider text-[#9A8B7A] uppercase font-medium">
+            Darshana +94 74 146 2698
+          </p>
+
+          {/* Location Button */}
+          <div
+            className="flex items-center gap-2 bg-[#8B1A4A] text-white text-[10px] px-3 py-1.5 rounded-sm shadow-md cursor-pointer hover:bg-[#72153c] transition-colors"
+            onClick={handleLocationClick}
+          >
+            <svg
+              width="12"
+              height="12"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              className="text-[#D4BC8A]"
+            >
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+            </svg>
+            <span className="tracking-widest uppercase font-semibold">
+              Location
+            </span>
           </div>
         </motion.div>
       </motion.div>
