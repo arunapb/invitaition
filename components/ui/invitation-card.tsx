@@ -34,7 +34,6 @@ export default function InvitationCard({ details }: InvitationCardProps) {
 
   return (
     <div className="w-full max-w-md mx-auto" style={{ perspective: "1500px" }}>
-    <div className="w-full max-w-md mx-auto" style={{ perspective: "1500px" }}>
       {isOpen && <FallingFlowers />}
       <div className="relative w-full aspect-3/4">
         {/* Inside Card - Always present at the back/bottom */}
