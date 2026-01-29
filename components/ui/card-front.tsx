@@ -114,7 +114,7 @@ export default function CardFront({ groomName, brideName }: CardFrontProps) {
         </div>
 
         {/* Bottom Section: Names & Divider */}
-        <div className="absolute bottom-[8%] left-0 right-0 flex flex-col items-center">
+        <div className="absolute bottom-[12%] left-0 right-0 flex flex-col items-center">
           {/* Couple names */}
           <motion.h1
             className="text-center leading-tight mb-6"
