@@ -112,36 +112,42 @@ export default function InvitationCard({ details }: InvitationCardProps) {
           />
         </motion.div>
 
-        {/* Tap indicator text below card */}
+        {/* Wax Seal Open Indicator - Center */}
         <motion.div
-          className="text-center mt-6"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: isOpen ? 0 : 1 }}
-          transition={{ delay: 0.5, duration: 0.5 }}
+          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 cursor-pointer"
+          initial={{ scale: 0, opacity: 0 }}
+          animate={{
+            scale: isOpen ? 1.5 : 1,
+            opacity: isOpen ? 0 : 1,
+          }}
+          transition={{ duration: 0.5 }}
+          onClick={(e) => {
+            e.stopPropagation();
+            handleCardClick();
+          }}
         >
-          <p className="text-xs tracking-[0.25em] text-[#8B1A4A] font-medium uppercase mb-2">
-            Tap to Open
-          </p>
-          <motion.div
-            animate={{ y: [0, 5, 0] }}
-            transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
-          >
-            <svg
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              fill="none"
-              className="text-[#C5A572] mx-auto"
+          <div className="relative w-16 h-16 flex items-center justify-center">
+            {/* Seal Body */}
+            <div className="absolute inset-0 rounded-full bg-linear-to-br from-[#C5A572] to-[#8B6E4A] shadow-lg border-2 border-[#D4BC8A] flex items-center justify-center">
+              <div className="absolute inset-1 rounded-full border border-[#9A7B50] opacity-50" />
+            </div>
+
+            {/* Pulse effect */}
+            <motion.div
+              className="absolute inset-0 rounded-full bg-[#C5A572]"
+              animate={{ scale: [1, 1.2, 1], opacity: [0.5, 0, 0.5] }}
+              transition={{ duration: 2, repeat: Infinity }}
+              style={{ zIndex: -1 }}
+            />
+
+            {/* Text */}
+            <p
+              className="relative z-10 text-white text-[10px] font-bold uppercase tracking-widest drop-shadow-md"
+              style={{ fontFamily: "'Playfair Display', serif" }}
             >
-              <path
-                d="M12 5L12 19M12 19L6 13M12 19L18 13"
-                stroke="currentColor"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </motion.div>
+              Open
+            </p>
+          </div>
         </motion.div>
       </div>
     </div>
