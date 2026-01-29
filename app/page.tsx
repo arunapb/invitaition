@@ -20,7 +20,7 @@ const weddingDetails = {
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gradient-to-b from-cream via-cream to-cream-dark flex items-center justify-center p-4 md:p-8">
+    <main className="min-h-screen bg-linear-to-b from-cream via-cream to-cream-dark flex items-center justify-center p-4 md:p-8">
       {/* Background pattern */}
       <div className="fixed inset-0 pattern-lotus opacity-30 pointer-events-none" />
 
