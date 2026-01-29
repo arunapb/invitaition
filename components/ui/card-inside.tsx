@@ -241,6 +241,14 @@ export default function CardInside({ details, isOpen }: CardInsideProps) {
           <p className="text-xs text-[#7A6B5A]">{details.city}</p>
         </motion.div>
 
+        {/* Contact Details */}
+        <motion.p
+          variants={itemVariants}
+          className="text-[10px] tracking-wider text-[#9A8B7A] uppercase mb-4"
+        >
+          Darshana +94 74 146 2698
+        </motion.p>
+
         {/* Location QR Code Section */}
         <motion.div
           variants={itemVariants}
