@@ -1,5 +1,6 @@
-import CoupleIllustration from "./Blue Floral Wedding Invitation.png";
-import FloralBouquet from "./Blue Floral Wedding Invitation2.png";
-import FloralStem from "./Blue Floral Wedding Invitation3.png";
+import CoupleIllustration from "./1.png";
+import FloralStem from "./2.png";
+import FloralSplash from "./3.png";
+import FloralBouquet from "./4.png";
 
-export { CoupleIllustration, FloralBouquet, FloralStem };
+export { CoupleIllustration, FloralStem, FloralSplash, FloralBouquet };
