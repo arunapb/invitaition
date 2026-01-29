@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import CardFront from "./card-front";
 import CardInside from "./card-inside";
+import FallingFlowers from "./falling-flowers";
 
 interface WeddingDetails {
   groomName: string;
@@ -33,6 +34,8 @@ export default function InvitationCard({ details }: InvitationCardProps) {
 
   return (
     <div className="w-full max-w-md mx-auto" style={{ perspective: "1500px" }}>
+    <div className="w-full max-w-md mx-auto" style={{ perspective: "1500px" }}>
+      {isOpen && <FallingFlowers />}
       <div className="relative w-full aspect-3/4">
         {/* Inside Card - Always present at the back/bottom */}
         <div
@@ -112,7 +115,7 @@ export default function InvitationCard({ details }: InvitationCardProps) {
 
         {/* Tap indicator text below card */}
         <motion.div
-          className="text-center mt-12"
+          className="text-center mt-6"
           initial={{ opacity: 0 }}
           animate={{ opacity: isOpen ? 0 : 1 }}
           transition={{ delay: 0.5, duration: 0.5 }}
