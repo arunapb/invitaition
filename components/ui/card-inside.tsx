@@ -106,12 +106,12 @@ export default function CardInside({ details, isOpen }: CardInsideProps) {
       {/* Watercolor floral - bottom left */}
 
       {/* Watercolor floral - bottom right */}
-      <div className="absolute -bottom-10 -right-10 w-64 h-64 opacity-85">
+      <div className="absolute -bottom-16 -right-16 w-72 h-72 opacity-85">
         <Image
           src={FloralBouquet}
           alt="Floral decoration"
           fill
-          style={{ transform: "scaleX(-1) rotate(0deg)" }}
+          style={{ transform: "rotate(180deg)" }}
           sizes="(max-width: 768px) 50vw, 25vw"
         />
       </div>
@@ -124,7 +124,7 @@ export default function CardInside({ details, isOpen }: CardInsideProps) {
 
       {/* Main content */}
       <motion.div
-        className="absolute inset-0 flex flex-col items-center justify-start px-10 pt-8 pb-6"
+        className="absolute inset-0 flex flex-col items-center justify-start px-10 pt-16 pb-6"
         variants={containerVariants}
         initial="hidden"
         animate={isOpen ? "visible" : "hidden"}
