@@ -129,7 +129,7 @@ export default function CardFront({ groomName, brideName }: CardFrontProps) {
             {groomName}
           </span>
           <span
-            className="block text-2xl my-1"
+            className="block text-xl my-0.5 md:my-1"
             style={{
               fontFamily: "'Great Vibes', cursive",
               color: "#C5A572",
