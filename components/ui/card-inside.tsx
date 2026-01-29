@@ -213,15 +213,15 @@ export default function CardInside({ details, isOpen }: CardInsideProps) {
         {/* Date section */}
         <motion.div
           variants={itemVariants}
-          className="flex items-center justify-center gap-3 mb-1"
+          className="grid grid-cols-3 items-center w-full max-w-[300px] mb-1 gap-2"
         >
           <span
-            className="text-xs text-[#7A6B5A]"
-            style={{ fontFamily: "'Playfair Display', serif" }}
+            className="text-xs text-[#7A6B5A] text-right font-bold tracking-widest"
+            style={{ fontFamily: "var(--font-body)" }}
           >
             {details.day.toUpperCase()}
           </span>
-          <div className="flex items-center gap-1 px-2 border-l-2 border-r-2 border-[#C5A572]/40">
+          <div className="flex items-center justify-center gap-1 px-2 border-l-2 border-r-2 border-[#C5A572]/40 w-fit mx-auto">
             <div className="w-1 h-5 rounded-full bg-[#C5A572]/70" />
             <span className="text-xl font-bold text-[#8B1A4A] mx-1">
               {details.date}
@@ -229,8 +229,8 @@ export default function CardInside({ details, isOpen }: CardInsideProps) {
             <div className="w-1 h-5 rounded-full bg-[#C5A572]/70" />
           </div>
           <span
-            className="text-xs text-[#7A6B5A]"
-            style={{ fontFamily: "'Playfair Display', serif" }}
+            className="text-xs text-[#7A6B5A] text-left font-bold tracking-widest"
+            style={{ fontFamily: "var(--font-body)" }}
           >
             AT {details.time.toUpperCase()}
           </span>
