@@ -74,7 +74,7 @@ export default function CardFront({ groomName, brideName }: CardFrontProps) {
           src={FloralBouquet}
           alt="Floral decoration"
           fill
-          style={{ transform: "rotate(180deg)" }}
+          style={{ transform: "rotate(-120deg)" }}
           sizes="(max-width: 768px) 50vw, 25vw"
         />
       </div>
