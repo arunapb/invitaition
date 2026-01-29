@@ -17,11 +17,11 @@ export default function CardFront({ groomName, brideName }: CardFrontProps) {
       <div className="absolute inset-0 bg-[#FBF7F0]" />
 
       {/* Gold vertical stripes - left */}
-      <div className="absolute left-0 top-0 bottom-0 w-4 bg-gradient-to-r from-[#C5A572] to-[#D4BC8A]" />
+      <div className="absolute left-0 top-0 bottom-0 w-4 bg-linear-to-r from-[#C5A572] to-[#D4BC8A]" />
       <div className="absolute left-5 top-0 bottom-0 w-1 bg-[#C5A572]/50" />
 
       {/* Gold vertical stripes - right */}
-      <div className="absolute right-0 top-0 bottom-0 w-4 bg-gradient-to-l from-[#C5A572] to-[#D4BC8A]" />
+      <div className="absolute right-0 top-0 bottom-0 w-4 bg-linear-to-l from-[#C5A572] to-[#D4BC8A]" />
       <div className="absolute right-5 top-0 bottom-0 w-1 bg-[#C5A572]/50" />
 
       {/* Watercolor floral decoration - top right */}
@@ -30,7 +30,7 @@ export default function CardFront({ groomName, brideName }: CardFrontProps) {
           src={FloralBouquet}
           alt="Floral decoration"
           fill
-          className="object-contain mix-blend-multiply"
+          className="object-contain"
           style={{ transform: "rotate(45deg) scaleX(-1)" }}
         />
       </div>
@@ -41,7 +41,7 @@ export default function CardFront({ groomName, brideName }: CardFrontProps) {
           src={FloralBouquet}
           alt="Floral decoration"
           fill
-          className="object-contain mix-blend-multiply"
+          className="object-contain"
           style={{ transform: "rotate(-45deg)" }}
         />
       </div>
@@ -52,7 +52,7 @@ export default function CardFront({ groomName, brideName }: CardFrontProps) {
           src={FloralStem}
           alt="Floral stems"
           fill
-          className="object-contain mix-blend-multiply"
+          className="object-contain"
         />
       </div>
 
@@ -62,7 +62,7 @@ export default function CardFront({ groomName, brideName }: CardFrontProps) {
           src={FloralBouquet}
           alt="Floral decoration"
           fill
-          className="object-contain mix-blend-multiply"
+          className="object-contain"
           style={{ transform: "rotate(15deg)" }}
         />
       </div>
@@ -73,7 +73,7 @@ export default function CardFront({ groomName, brideName }: CardFrontProps) {
           src={FloralBouquet}
           alt="Floral decoration"
           fill
-          className="object-contain mix-blend-multiply"
+          className="object-contain"
           style={{ transform: "scaleX(-1) rotate(10deg)" }}
         />
       </div>
@@ -97,7 +97,7 @@ export default function CardFront({ groomName, brideName }: CardFrontProps) {
             src={CoupleIllustration}
             alt="Couple illustration"
             fill
-            className="object-contain mix-blend-multiply"
+            className="object-contain"
           />
         </motion.div>
 
@@ -151,9 +151,9 @@ export default function CardFront({ groomName, brideName }: CardFrontProps) {
 
         {/* Decorative divider */}
         <div className="flex items-center gap-2 mb-6">
-          <div className="w-8 h-px bg-gradient-to-r from-transparent to-[#C5A572]/60" />
+          <div className="w-8 h-px bg-linear-to-r from-transparent to-[#C5A572]/60" />
           <div className="w-1.5 h-1.5 rounded-full bg-[#C5A572]/60" />
-          <div className="w-8 h-px bg-gradient-to-l from-transparent to-[#C5A572]/60" />
+          <div className="w-8 h-px bg-linear-to-l from-transparent to-[#C5A572]/60" />
         </div>
 
         {/* Tap to open */}
@@ -185,7 +185,7 @@ export default function CardFront({ groomName, brideName }: CardFrontProps) {
 
       {/* Subtle shimmer effect */}
       <motion.div
-        className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent pointer-events-none"
+        className="absolute inset-0 bg-linear-to-r from-transparent via-white/5 to-transparent pointer-events-none"
         animate={{ x: ["-100%", "100%"] }}
         transition={{ duration: 4, repeat: Infinity, repeatDelay: 3 }}
       />

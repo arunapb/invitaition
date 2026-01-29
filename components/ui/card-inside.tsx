@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import Image from "next/image";
 import { CoupleIllustration, FloralBouquet, FloralStem } from "@/assets/images";
 
@@ -25,7 +25,7 @@ interface CardInsideProps {
 }
 
 export default function CardInside({ details, isOpen }: CardInsideProps) {
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -36,7 +36,7 @@ export default function CardInside({ details, isOpen }: CardInsideProps) {
     },
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 15 },
     visible: {
       opacity: 1,
@@ -56,11 +56,11 @@ export default function CardInside({ details, isOpen }: CardInsideProps) {
       <div className="absolute inset-0 bg-[#FBF7F0]" />
 
       {/* Gold vertical stripes - left */}
-      <div className="absolute left-0 top-0 bottom-0 w-4 bg-gradient-to-r from-[#C5A572] to-[#D4BC8A]" />
+      <div className="absolute left-0 top-0 bottom-0 w-4 bg-linear-to-r from-[#C5A572] to-[#D4BC8A]" />
       <div className="absolute left-5 top-0 bottom-0 w-1 bg-[#C5A572]/50" />
 
       {/* Gold vertical stripes - right */}
-      <div className="absolute right-0 top-0 bottom-0 w-4 bg-gradient-to-l from-[#C5A572] to-[#D4BC8A]" />
+      <div className="absolute right-0 top-0 bottom-0 w-4 bg-linear-to-l from-[#C5A572] to-[#D4BC8A]" />
       <div className="absolute right-5 top-0 bottom-0 w-1 bg-[#C5A572]/50" />
 
       {/* Watercolor floral - top right */}
@@ -69,7 +69,7 @@ export default function CardInside({ details, isOpen }: CardInsideProps) {
           src={FloralBouquet}
           alt="Floral decoration"
           fill
-          className="object-contain mix-blend-multiply"
+          className="object-contain"
           style={{ transform: "rotate(45deg) scaleX(-1)" }}
         />
       </div>
@@ -80,7 +80,7 @@ export default function CardInside({ details, isOpen }: CardInsideProps) {
           src={FloralBouquet}
           alt="Floral decoration"
           fill
-          className="object-contain mix-blend-multiply"
+          className="object-contain"
           style={{ transform: "rotate(-40deg)" }}
         />
       </div>
@@ -101,7 +101,7 @@ export default function CardInside({ details, isOpen }: CardInsideProps) {
           src={FloralBouquet}
           alt="Floral decoration"
           fill
-          className="object-contain mix-blend-multiply"
+          className="object-contain"
           style={{ transform: "rotate(15deg)" }}
         />
       </div>
@@ -112,7 +112,7 @@ export default function CardInside({ details, isOpen }: CardInsideProps) {
           src={FloralBouquet}
           alt="Floral decoration"
           fill
-          className="object-contain mix-blend-multiply"
+          className="object-contain"
           style={{ transform: "scaleX(-1) rotate(10deg)" }}
         />
       </div>
@@ -136,7 +136,7 @@ export default function CardInside({ details, isOpen }: CardInsideProps) {
             src={CoupleIllustration}
             alt="Couple illustration"
             fill
-            className="object-contain mix-blend-multiply"
+            className="object-contain"
           />
         </motion.div>
 
@@ -267,7 +267,7 @@ export default function CardInside({ details, isOpen }: CardInsideProps) {
         >
           <div className="flex items-center gap-2 cursor-pointer group">
             {/* QR Code placeholder */}
-            <div className="w-14 h-14 bg-gradient-to-br from-[#C5A572] to-[#D4BC8A] rounded p-0.5 shadow-md group-hover:shadow-lg transition-shadow">
+            <div className="w-14 h-14 bg-linear-to-br from-[#C5A572] to-[#D4BC8A] rounded p-0.5 shadow-md group-hover:shadow-lg transition-shadow">
               <div className="w-full h-full bg-white rounded-sm flex items-center justify-center">
                 <svg viewBox="0 0 50 50" className="w-11 h-11">
                   {/* QR Code pattern */}
