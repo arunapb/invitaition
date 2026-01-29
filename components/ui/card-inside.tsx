@@ -106,12 +106,12 @@ export default function CardInside({ details, isOpen }: CardInsideProps) {
       {/* Watercolor floral - bottom left */}
 
       {/* Watercolor floral - bottom right */}
-      <div className="absolute -bottom-8 -right-8 w-40 h-40 md:-bottom-16 md:-right-16 md:w-72 md:h-72 opacity-85">
+      <div className="absolute -bottom-8 -right-8 w-48 h-48 md:-bottom-16 md:-right-16 md:w-80 md:h-80 opacity-85">
         <Image
           src={FloralBouquet}
           alt="Floral decoration"
           fill
-          style={{ transform: "rotate(-120deg)" }}
+          style={{ transform: "rotate(-250deg)" }}
           sizes="(max-width: 768px) 50vw, 25vw"
         />
       </div>
