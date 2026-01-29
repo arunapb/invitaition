@@ -87,76 +87,86 @@ export default function CardFront({ groomName, brideName }: CardFrontProps) {
       <div className="absolute top-1/2 right-1/4 w-2 h-2 rounded-full bg-[#C5A572]/25" />
 
       {/* Main content */}
-      <div className="absolute inset-0 flex flex-col items-center justify-center px-12 py-16">
-        {/* Couple illustration */}
-        <motion.div
-          className="mb-4 relative w-24 h-24"
-          animate={{ y: [0, -5, 0] }}
-          transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-        >
-          <Image
-            src={CoupleIllustration}
-            alt="Couple illustration"
-            fill
-            className="object-contain"
-            priority
-            sizes="(max-width: 768px) 33vw, 15vw"
-          />
-        </motion.div>
-
-        {/* Wedding invitation text */}
-        <p className="text-xs tracking-[0.25em] text-[#7A6B5A] uppercase mb-4">
-          Wedding Invitation
-        </p>
-
-        {/* Couple names */}
-        <motion.h1
-          className="text-center leading-tight mb-6"
-          animate={{ scale: [1, 1.02, 1] }}
-          transition={{ duration: 3, repeat: Infinity }}
-        >
-          <span
-            className="block text-4xl md:text-5xl"
-            style={{
-              fontFamily: "'Great Vibes', cursive",
-              background:
-                "linear-gradient(135deg, #C5A572 0%, #D4BC8A 50%, #B8956A 100%)",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-              backgroundClip: "text",
-            }}
+      {/* Main content */}
+      <div className="absolute inset-0 flex flex-col items-center justify-between px-6 py-12 md:px-12 md:py-16">
+        {/* Top Section: Illustration & Title */}
+        <div className="flex flex-col items-center mt-4 md:mt-8">
+          {/* Couple illustration */}
+          <motion.div
+            className="mb-4 relative w-20 h-20 md:w-24 md:h-24"
+            animate={{ y: [0, -5, 0] }}
+            transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
           >
-            {groomName}
-          </span>
-          <span
-            className="block text-xl my-0.5 md:my-1"
-            style={{
-              fontFamily: "'Great Vibes', cursive",
-              color: "#C5A572",
-            }}
-          >
-            &
-          </span>
-          <span
-            className="block text-4xl md:text-5xl"
-            style={{
-              fontFamily: "'Great Vibes', cursive",
-              background:
-                "linear-gradient(135deg, #C5A572 0%, #D4BC8A 50%, #B8956A 100%)",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-              backgroundClip: "text",
-            }}
-          >
-            {brideName}
-          </span>
-        </motion.h1>
+            <Image
+              src={CoupleIllustration}
+              alt="Couple illustration"
+              fill
+              className="object-contain"
+              priority
+              sizes="(max-width: 768px) 33vw, 15vw"
+            />
+          </motion.div>
 
-        {/* Decorative divider */}
-        <div className="flex items-center gap-2 mb-6">
-          <div className="w-8 h-px bg-linear-to-r from-transparent to-[#C5A572]/60" />
-          <div className="w-1.5 h-1.5 rounded-full bg-[#C5A572]/60" />
-          <div className="w-8 h-px bg-linear-to-l from-transparent to-[#C5A572]/60" />
+          {/* Wedding invitation text */}
+          <p className="text-[10px] md:text-xs tracking-[0.25em] text-[#7A6B5A] uppercase">
+            Wedding Invitation
+          </p>
+        </div>
+
+        {/* Center Spacer for Seal */}
+        <div className="h-24 w-full" aria-hidden="true" />
+
+        {/* Bottom Section: Names & Divider */}
+        <div className="flex flex-col items-center mb-8 md:mb-12">
+          {/* Couple names */}
+          <motion.h1
+            className="text-center leading-tight mb-6"
+            animate={{ scale: [1, 1.02, 1] }}
+            transition={{ duration: 3, repeat: Infinity }}
+          >
+            <span
+              className="block text-4xl md:text-5xl"
+              style={{
+                fontFamily: "'Great Vibes', cursive",
+                background:
+                  "linear-gradient(135deg, #C5A572 0%, #D4BC8A 50%, #B8956A 100%)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                backgroundClip: "text",
+              }}
+            >
+              {groomName}
+            </span>
+            <span
+              className="block text-xl md:text-2xl my-1"
+              style={{
+                fontFamily: "'Great Vibes', cursive",
+                color: "#C5A572",
+              }}
+            >
+              &
+            </span>
+            <span
+              className="block text-4xl md:text-5xl"
+              style={{
+                fontFamily: "'Great Vibes', cursive",
+                background:
+                  "linear-gradient(135deg, #C5A572 0%, #D4BC8A 50%, #B8956A 100%)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                backgroundClip: "text",
+              }}
+            >
+              {brideName}
+            </span>
+          </motion.h1>
+
+          {/* Decorative divider */}
+          <div className="flex items-center gap-2">
+            <div className="w-8 h-px bg-linear-to-r from-transparent to-[#C5A572]/60" />
+            <div className="w-1.5 h-1.5 rounded-full bg-[#C5A572]/60" />
+            <div className="w-8 h-px bg-linear-to-l from-transparent to-[#C5A572]/60" />
+          </div>
         </div>
       </div>
 
