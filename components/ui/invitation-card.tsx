@@ -23,17 +23,27 @@ interface WeddingDetails {
 
 interface InvitationCardProps {
   details: WeddingDetails;
+  onInteract: () => void;
 }
 
-export default function InvitationCard({ details }: InvitationCardProps) {
+export default function InvitationCard({
+  details,
+  onInteract,
+}: InvitationCardProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleCardClick = () => {
+    if (!isOpen) {
+      onInteract();
+    }
     setIsOpen(!isOpen);
   };
 
   return (
-    <div className="w-full max-w-md mx-auto" style={{ perspective: "1500px" }}>
+    <div
+      className="w-full max-w-md mx-auto relative"
+      style={{ perspective: "1500px" }}
+    >
       {isOpen && <FallingFlowers />}
       <div className="relative w-full aspect-3/4">
         {/* Inside Card - Always present at the back/bottom */}

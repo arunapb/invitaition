@@ -1,4 +1,8 @@
+"use client";
+
+import { useState } from "react";
 import InvitationCard from "@/components/ui/invitation-card";
+import AudioPlayer from "@/components/ui/audio-player";
 
 // Wedding details - can be easily customized
 const weddingDetails = {
@@ -19,14 +23,21 @@ const weddingDetails = {
 };
 
 export default function Home() {
+  const [hasInteracted, setHasInteracted] = useState(false);
+
   return (
     <main className="h-[100dvh] w-screen overflow-hidden bg-linear-to-b from-cream via-cream to-cream-dark flex items-center justify-center p-4 md:p-8 overscroll-none touch-none">
+      <AudioPlayer isPlaying={hasInteracted} />
+
       {/* Background pattern */}
       <div className="fixed inset-0 pattern-lotus opacity-30 pointer-events-none" />
 
       {/* Main invitation card */}
-      <div className="relative z-10 w-full max-w-md max-h-[90dvh] aspect-3/4 flex items-center justify-center">
-        <InvitationCard details={weddingDetails} />
+      <div className="relative z-10 w-full max-w-md md:max-w-2xl max-h-[90dvh] aspect-3/4 flex items-center justify-center">
+        <InvitationCard
+          details={weddingDetails}
+          onInteract={() => setHasInteracted(true)}
+        />
       </div>
     </main>
   );
