@@ -26,6 +26,9 @@ export const metadata: Metadata = {
     description: "Join us to celebrate our special day",
     type: "website",
   },
+  icons: {
+    icon: "/icon",
+  },
 };
 
 export const viewport: Viewport = {
