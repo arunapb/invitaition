@@ -264,35 +264,66 @@ export default function CardInside({ details, isOpen }: CardInsideProps) {
 
         {/* Contact Details */}
         {/* Bottom Left Content: Contact & Location */}
-        <motion.div
-          variants={itemVariants}
-          className="absolute bottom-4 left-10 md:bottom-6 md:left-12 flex flex-col items-start gap-2 md:gap-3"
-        >
+        <motion.div className="absolute bottom-4 left-10 md:bottom-6 md:left-12 flex flex-col items-start gap-2">
           {/* Contact Details */}
-          <a
-            href="tel:+94741462698"
-            className="text-[10px] tracking-wider text-[#9A8B7A] uppercase font-medium hover:text-[#8B1A4A] transition-colors"
-          >
-            Darshana +94 74 146 2698
-          </a>
-
-          {/* Location Button */}
-          <div
-            className="flex items-center gap-2 bg-[#8B1A4A] text-white text-[10px] px-3 py-1.5 rounded-sm shadow-md cursor-pointer hover:bg-[#72153c] transition-colors"
-            onClick={handleLocationClick}
-          >
-            <svg
-              width="12"
-              height="12"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-              className="text-[#D4BC8A]"
+          <div>
+            <p
+              className="text-xs md:text-sm font-semibold tracking-wide uppercase"
+              style={{
+                fontFamily: "var(--font-heading)",
+                color: "#8B1A4A",
+              }}
             >
-              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
-            </svg>
-            <span className="tracking-widest uppercase font-semibold">
-              Location
-            </span>
+              RSVP
+            </p>
+            <a
+              href="tel:+94741462698"
+              className="text-[10px] tracking-wider text-[#9A8B7A] uppercase font-medium hover:text-[#8B1A4A] transition-colors mb-1"
+            >
+              Darshana +94 74 146 2698
+            </a>
+          </div>
+
+          <div className="flex items-center gap-2">
+            {/* Location Button */}
+            <div
+              className="flex items-center gap-2 bg-[#8B1A4A] text-white text-[10px] px-3 py-1.5 rounded-sm shadow-md cursor-pointer hover:bg-[#72153c] transition-colors"
+              onClick={handleLocationClick}
+            >
+              <svg
+                width="12"
+                height="12"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                className="text-[#D4BC8A]"
+              >
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+              </svg>
+              <span className="tracking-widest uppercase font-semibold">
+                Location
+              </span>
+            </div>
+
+            {/* Download Button */}
+            <a
+              href="/invitation.pdf"
+              download="invitation.pdf"
+              className="flex items-center gap-2 bg-[#8B1A4A] text-white text-[10px] px-3 py-1.5 rounded-sm shadow-md cursor-pointer hover:bg-[#72153c] transition-colors"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <svg
+                width="12"
+                height="12"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                className="text-[#D4BC8A]"
+              >
+                <path d="M5 20h14v-2H5v2zM19 9h-4V3H9v6H5l7 7 7-7z" />
+              </svg>
+              <span className="tracking-widest uppercase font-semibold">
+                Download
+              </span>
+            </a>
           </div>
         </motion.div>
       </motion.div>
