@@ -278,7 +278,7 @@ export default function CardInside({ details, isOpen }: CardInsideProps) {
             </p>
             <a
               href="tel:+94741462698"
-              className="text-[10px] tracking-wider text-[#9A8B7A] uppercase font-medium hover:text-[#8B1A4A] transition-colors mb-1"
+              className="text-[12px] tracking-wider text-[#9A8B7A] uppercase font-medium hover:text-[#8B1A4A] transition-colors mb-1"
             >
               Darshana +94 74 146 2698
             </a>

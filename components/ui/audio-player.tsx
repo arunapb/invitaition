@@ -10,7 +10,7 @@ interface AudioPlayerProps {
 }
 
 export default function AudioPlayer({
-  src = "/background-music.mp3", // Local file
+  src = "/background-music.mp3", 
   isPlaying,
 }: AudioPlayerProps) {
   const [isMuted, setIsMuted] = useState(false);
@@ -18,7 +18,7 @@ export default function AudioPlayer({
 
   useEffect(() => {
     if (audioRef.current) {
-      audioRef.current.volume = 0.4; // Set volume to 40%
+      audioRef.current.volume = 0.6;
       if (isPlaying && !isMuted) {
         audioRef.current.play().catch((e) => {
           console.log("Audio play failed:", e);
